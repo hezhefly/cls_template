@@ -1,0 +1,35 @@
+_name_: "efficientnet.yaml"
+model:
+  in_channel: 3
+  num_classes: 3
+  model_name: "efficientnet-b1"
+  resume: False
+  weights: "assets/weights/x.pt"
+  height: 240
+  width: 240
+
+train:
+  batch_size: 32
+  max_epoch: 30
+
+test:
+  batch_size: 32
+
+solver:
+  seed: 42
+  device: "cpu"
+  lr: 0.001
+
+datasets:
+  name: "crack"
+  images_dir: "data/images"
+  train_file: "data/train.txt"
+  val_file: "data/val.txt"
+
+save:
+  log_dir: "assets/logs"
+  weight_dir: "assets/weights"
+  val_per_epoch: 2
+
+
+
