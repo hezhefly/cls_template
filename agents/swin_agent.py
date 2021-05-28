@@ -1,0 +1,146 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# @Time    : 2021/5/28 12:58
+# @Author  : yangqiang
+# @File    : swin_agent.py
+import torch
+from torch import nn
+from torch.utils.data import DataLoader
+from agents.base import BaseAgent
+from dataloader import ClsDataset, CustomAug
+from loguru import logger
+from graphs.swin_transformer import SwinTransformer
+import os
+from utils.metrics import accuracy, AverageMeter
+
+
+class ClsAgent(BaseAgent):
+    def __init__(self, cfg):
+        super().__init__(cfg)
+        self.cfg = cfg
+        self.device = torch.device(self.cfg.solver.device)  # define device
+        self.model = SwinTransformer(img_size=224,
+                                     patch_size=4,
+                                     in_chans=3,
+                                     num_classes=3,
+                                     embed_dim=96,
+                                     depths=[2, 2, 6, 2],
+                                     num_heads=[3, 6, 12, 24],
+                                     window_size=7,
+                                     mlp_ratio=4.,
+                                     qkv_bias=True,
+                                     qk_scale=None,
+                                     drop_rate=0.0,
+                                     drop_path_rate=0.2,
+                                     ape=False,
+                                     patch_norm=True,
+                                     use_checkpoint=False).to(self.device)  # models
+        self.image_size = 224
+        self.loss = nn.CrossEntropyLoss()
+        self.optimizer = torch.optim.SGD(
+            self.model.parameters(), self.cfg.solver.lr)
+
+        self.current_epoch = 0
+        self.best_acc = 0
+
+        self.train_trans = CustomAug(
+            height=self.image_size,
+            width=self.image_size)('train')
+        self.val_trans = CustomAug(
+            height=self.image_size,
+            width=self.image_size)('val')
+        self.train_data_loader = self.load_dataset('train')
+        self.val_data_loader = self.load_dataset('val')
+
+        if self.cfg.model.resume:
+            # 预训练模型的参数
+            weight_state_dict = torch.load(
+                self.cfg.model.weights, map_location=self.device)
+            # model自己的参数
+            model_state_dict = self.model.state_dict()
+            # 加载预训练模型的参数和model中不冲突的部分
+            state_dict_new = {k: v for k, v in weight_state_dict.items() if k in model_state_dict.keys() and
+                              self.model.state_dict()[k].shape == v.shape}
+            logger.info("load layers: {}".format(state_dict_new.keys()))
+            model_state_dict.update(state_dict_new)
+            # 更新模型参数
+            self.model.load_state_dict(model_state_dict)
+
+    def load_dataset(self, mode):
+        if mode == "train":
+            train_dataset = ClsDataset(images_dir=self.cfg.datasets.images_dir,
+                                       file=self.cfg.datasets.train_file,
+                                       transform=self.train_trans)
+            train_data_loader = DataLoader(
+                train_dataset,
+                batch_size=self.cfg.train.batch_size,
+                shuffle=True)
+            logger.info(f"{len(train_data_loader.dataset)} train data loaded,batch size: "
+                        f"{self.cfg.train.batch_size}, image size:{self.image_size}")
+            return train_data_loader
+        elif mode == "val":
+            val_dataset = ClsDataset(images_dir=self.cfg.datasets.images_dir,
+                                     file=self.cfg.datasets.val_file,
+                                     transform=self.val_trans)
+            val_data_loader = DataLoader(
+                val_dataset, batch_size=self.cfg.test.batch_size)
+            logger.info(
+                f"{len(val_data_loader.dataset)} val data loaded,batch size: {self.cfg.test.batch_size}")
+            return val_data_loader
+
+    @logger.catch
+    def train(self):
+        for epoch in range(self.cfg.train.max_epoch):
+            self.model.train()
+            for batch_idx, (images, labels) in enumerate(
+                    self.train_data_loader):
+                images, labels = images.to(self.device), labels.to(self.device)
+                self.optimizer.zero_grad()
+                outputs = self.model(images)
+                loss = self.loss(outputs, labels)
+                loss.backward()
+                self.optimizer.step()
+                logger.info('Train Epoch: [{}/{}] [{}/{}], current batch Loss: {:.6f} lr: {}'.format(
+                    self.current_epoch,
+                    self.cfg.train.max_epoch,
+                    batch_idx * self.cfg.train.batch_size + len(images),
+                    len(self.train_data_loader.dataset),
+                    loss.item(),
+                    self.optimizer.state_dict()['param_groups'][0]['lr']))
+
+            self.current_epoch += 1
+
+            if self.current_epoch % self.cfg.save.val_per_epoch == 0:
+                acc = self.validate()
+                acc_best = acc > self.best_acc
+                if acc_best:  #
+                    self.best_acc = acc
+                    save_path = os.path.join(self.cfg.save.weight_dir,
+                                             f"{self.cfg.model.model_name}_{self.current_epoch}_{round(acc, 3)}.pt")
+                    torch.save(self.model.state_dict(), save_path)
+
+    def load_model(self, saved_model):
+        self.model.load_state_dict(
+            torch.load(
+                saved_model,
+                map_location=self.device))
+        self.model.eval()
+
+    def validate(self):
+        self.model.eval()
+
+        losses = AverageMeter('Loss', ':.4e')
+        top1 = AverageMeter('Acc@1', ':6.2f')
+
+        with torch.no_grad():
+            for images, labels in self.val_data_loader:
+                images, labels = images.to(self.device), labels.to(self.device)
+                outputs = self.model(images)
+                loss = self.loss(outputs, labels)
+
+                acc1 = accuracy(outputs, labels, topk=(1,))[0]
+                losses.update(loss.item(), images.size(0))
+                top1.update(acc1.item(), images.size(0))
+
+            logger.info(f"val loss:{losses.avg}, acc: {top1.avg}")
+        return top1.avg
