@@ -4,7 +4,7 @@ model:
   num_classes: 3
   model_name: "swin"
   resume: True
-  weights: "assets/weights/swin_tiny_patch4_window7_224.pt"
+  weights: "assets/weights/swin_tiny_patch4_window7_224.pt"  # ['model']
 
 train:
   batch_size: 24

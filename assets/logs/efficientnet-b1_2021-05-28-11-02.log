@@ -1,0 +1,333 @@
+2021-05-28 11:02:53 | INFO | DotMap(_name_='efficientnet.yaml', model=DotMap(in_channel=3, num_classes=3, model_name='efficientnet-b1', resume=False, weights='assets/weights/x.pt', height=240, width=240), train=DotMap(batch_size=24, max_epoch=30), test=DotMap(batch_size=24), solver=DotMap(seed=42, device='cuda:0', lr=0.001), datasets=DotMap(name='crack', images_dir='data/images', train_file='data/train.txt', val_file='data/val.txt'), save=DotMap(log_dir='assets/logs', weight_dir='assets/weights', val_per_epoch=1))
+2021-05-28 11:02:54 | INFO | 240 train data loaded,batch size: 24, image size:240
+2021-05-28 11:02:54 | INFO | 60 val data loaded,batch size: 24
+2021-05-28 11:02:56 | INFO | Train Epoch: [0/30] [24/240], current batch Loss: 1.083910 lr: 0.001
+2021-05-28 11:02:56 | INFO | Train Epoch: [0/30] [48/240], current batch Loss: 1.102164 lr: 0.001
+2021-05-28 11:02:57 | INFO | Train Epoch: [0/30] [72/240], current batch Loss: 1.102245 lr: 0.001
+2021-05-28 11:02:57 | INFO | Train Epoch: [0/30] [96/240], current batch Loss: 1.120396 lr: 0.001
+2021-05-28 11:02:58 | INFO | Train Epoch: [0/30] [120/240], current batch Loss: 1.088379 lr: 0.001
+2021-05-28 11:02:58 | INFO | Train Epoch: [0/30] [144/240], current batch Loss: 1.107037 lr: 0.001
+2021-05-28 11:02:58 | INFO | Train Epoch: [0/30] [168/240], current batch Loss: 1.073684 lr: 0.001
+2021-05-28 11:02:59 | INFO | Train Epoch: [0/30] [192/240], current batch Loss: 1.099294 lr: 0.001
+2021-05-28 11:02:59 | INFO | Train Epoch: [0/30] [216/240], current batch Loss: 1.081328 lr: 0.001
+2021-05-28 11:03:00 | INFO | Train Epoch: [0/30] [240/240], current batch Loss: 1.064635 lr: 0.001
+2021-05-28 11:03:00 | INFO | val loss:1.0729520559310912, acc: 41.666665649414064
+2021-05-28 11:03:01 | INFO | Train Epoch: [1/30] [24/240], current batch Loss: 1.118563 lr: 0.001
+2021-05-28 11:03:01 | INFO | Train Epoch: [1/30] [48/240], current batch Loss: 1.097652 lr: 0.001
+2021-05-28 11:03:02 | INFO | Train Epoch: [1/30] [72/240], current batch Loss: 1.072034 lr: 0.001
+2021-05-28 11:03:02 | INFO | Train Epoch: [1/30] [96/240], current batch Loss: 1.120402 lr: 0.001
+2021-05-28 11:03:02 | INFO | Train Epoch: [1/30] [120/240], current batch Loss: 1.111058 lr: 0.001
+2021-05-28 11:03:03 | INFO | Train Epoch: [1/30] [144/240], current batch Loss: 1.095314 lr: 0.001
+2021-05-28 11:03:03 | INFO | Train Epoch: [1/30] [168/240], current batch Loss: 1.059881 lr: 0.001
+2021-05-28 11:03:04 | INFO | Train Epoch: [1/30] [192/240], current batch Loss: 1.052427 lr: 0.001
+2021-05-28 11:03:04 | INFO | Train Epoch: [1/30] [216/240], current batch Loss: 1.101133 lr: 0.001
+2021-05-28 11:03:04 | INFO | Train Epoch: [1/30] [240/240], current batch Loss: 1.070288 lr: 0.001
+2021-05-28 11:03:05 | INFO | val loss:1.0518093824386596, acc: 46.66666488647461
+2021-05-28 11:03:05 | INFO | Train Epoch: [2/30] [24/240], current batch Loss: 1.096218 lr: 0.001
+2021-05-28 11:03:06 | INFO | Train Epoch: [2/30] [48/240], current batch Loss: 1.072429 lr: 0.001
+2021-05-28 11:03:06 | INFO | Train Epoch: [2/30] [72/240], current batch Loss: 1.117078 lr: 0.001
+2021-05-28 11:03:06 | INFO | Train Epoch: [2/30] [96/240], current batch Loss: 1.067631 lr: 0.001
+2021-05-28 11:03:07 | INFO | Train Epoch: [2/30] [120/240], current batch Loss: 1.051643 lr: 0.001
+2021-05-28 11:03:07 | INFO | Train Epoch: [2/30] [144/240], current batch Loss: 1.065098 lr: 0.001
+2021-05-28 11:03:08 | INFO | Train Epoch: [2/30] [168/240], current batch Loss: 1.029789 lr: 0.001
+2021-05-28 11:03:08 | INFO | Train Epoch: [2/30] [192/240], current batch Loss: 1.054277 lr: 0.001
+2021-05-28 11:03:08 | INFO | Train Epoch: [2/30] [216/240], current batch Loss: 1.055774 lr: 0.001
+2021-05-28 11:03:09 | INFO | Train Epoch: [2/30] [240/240], current batch Loss: 1.045762 lr: 0.001
+2021-05-28 11:03:09 | INFO | val loss:1.0324276208877563, acc: 49.99999771118164
+2021-05-28 11:03:10 | INFO | Train Epoch: [3/30] [24/240], current batch Loss: 1.025700 lr: 0.001
+2021-05-28 11:03:10 | INFO | Train Epoch: [3/30] [48/240], current batch Loss: 1.118070 lr: 0.001
+2021-05-28 11:03:11 | INFO | Train Epoch: [3/30] [72/240], current batch Loss: 1.063174 lr: 0.001
+2021-05-28 11:03:11 | INFO | Train Epoch: [3/30] [96/240], current batch Loss: 0.999078 lr: 0.001
+2021-05-28 11:03:12 | INFO | Train Epoch: [3/30] [120/240], current batch Loss: 1.046332 lr: 0.001
+2021-05-28 11:03:12 | INFO | Train Epoch: [3/30] [144/240], current batch Loss: 1.067943 lr: 0.001
+2021-05-28 11:03:13 | INFO | Train Epoch: [3/30] [168/240], current batch Loss: 1.033674 lr: 0.001
+2021-05-28 11:03:13 | INFO | Train Epoch: [3/30] [192/240], current batch Loss: 1.022132 lr: 0.001
+2021-05-28 11:03:13 | INFO | Train Epoch: [3/30] [216/240], current batch Loss: 1.064736 lr: 0.001
+2021-05-28 11:03:14 | INFO | Train Epoch: [3/30] [240/240], current batch Loss: 1.024063 lr: 0.001
+2021-05-28 11:03:14 | INFO | val loss:1.0148597955703735, acc: 54.99999923706055
+2021-05-28 11:03:15 | INFO | Train Epoch: [4/30] [24/240], current batch Loss: 1.066466 lr: 0.001
+2021-05-28 11:03:15 | INFO | Train Epoch: [4/30] [48/240], current batch Loss: 1.012578 lr: 0.001
+2021-05-28 11:03:16 | INFO | Train Epoch: [4/30] [72/240], current batch Loss: 1.026495 lr: 0.001
+2021-05-28 11:03:16 | INFO | Train Epoch: [4/30] [96/240], current batch Loss: 1.029728 lr: 0.001
+2021-05-28 11:03:16 | INFO | Train Epoch: [4/30] [120/240], current batch Loss: 0.988347 lr: 0.001
+2021-05-28 11:03:17 | INFO | Train Epoch: [4/30] [144/240], current batch Loss: 1.036763 lr: 0.001
+2021-05-28 11:03:17 | INFO | Train Epoch: [4/30] [168/240], current batch Loss: 1.078667 lr: 0.001
+2021-05-28 11:03:18 | INFO | Train Epoch: [4/30] [192/240], current batch Loss: 1.004600 lr: 0.001
+2021-05-28 11:03:18 | INFO | Train Epoch: [4/30] [216/240], current batch Loss: 0.974756 lr: 0.001
+2021-05-28 11:03:18 | INFO | Train Epoch: [4/30] [240/240], current batch Loss: 1.046274 lr: 0.001
+2021-05-28 11:03:19 | INFO | val loss:0.9972582459449768, acc: 63.33333053588867
+2021-05-28 11:03:19 | INFO | Train Epoch: [5/30] [24/240], current batch Loss: 1.018727 lr: 0.001
+2021-05-28 11:03:20 | INFO | Train Epoch: [5/30] [48/240], current batch Loss: 1.034650 lr: 0.001
+2021-05-28 11:03:20 | INFO | Train Epoch: [5/30] [72/240], current batch Loss: 1.051005 lr: 0.001
+2021-05-28 11:03:21 | INFO | Train Epoch: [5/30] [96/240], current batch Loss: 1.073633 lr: 0.001
+2021-05-28 11:03:21 | INFO | Train Epoch: [5/30] [120/240], current batch Loss: 1.052794 lr: 0.001
+2021-05-28 11:03:21 | INFO | Train Epoch: [5/30] [144/240], current batch Loss: 0.987985 lr: 0.001
+2021-05-28 11:03:22 | INFO | Train Epoch: [5/30] [168/240], current batch Loss: 1.007758 lr: 0.001
+2021-05-28 11:03:22 | INFO | Train Epoch: [5/30] [192/240], current batch Loss: 1.007548 lr: 0.001
+2021-05-28 11:03:23 | INFO | Train Epoch: [5/30] [216/240], current batch Loss: 1.009119 lr: 0.001
+2021-05-28 11:03:23 | INFO | Train Epoch: [5/30] [240/240], current batch Loss: 1.047784 lr: 0.001
+2021-05-28 11:03:24 | INFO | val loss:0.9809316635131836, acc: 68.33332977294921
+2021-05-28 11:03:24 | INFO | Train Epoch: [6/30] [24/240], current batch Loss: 1.033347 lr: 0.001
+2021-05-28 11:03:25 | INFO | Train Epoch: [6/30] [48/240], current batch Loss: 0.986095 lr: 0.001
+2021-05-28 11:03:25 | INFO | Train Epoch: [6/30] [72/240], current batch Loss: 0.987671 lr: 0.001
+2021-05-28 11:03:25 | INFO | Train Epoch: [6/30] [96/240], current batch Loss: 1.030502 lr: 0.001
+2021-05-28 11:03:26 | INFO | Train Epoch: [6/30] [120/240], current batch Loss: 1.033449 lr: 0.001
+2021-05-28 11:03:26 | INFO | Train Epoch: [6/30] [144/240], current batch Loss: 1.017878 lr: 0.001
+2021-05-28 11:03:27 | INFO | Train Epoch: [6/30] [168/240], current batch Loss: 0.989815 lr: 0.001
+2021-05-28 11:03:27 | INFO | Train Epoch: [6/30] [192/240], current batch Loss: 0.978542 lr: 0.001
+2021-05-28 11:03:28 | INFO | Train Epoch: [6/30] [216/240], current batch Loss: 0.979179 lr: 0.001
+2021-05-28 11:03:28 | INFO | Train Epoch: [6/30] [240/240], current batch Loss: 1.026934 lr: 0.001
+2021-05-28 11:03:28 | INFO | val loss:0.9657613277435303, acc: 69.9999984741211
+2021-05-28 11:03:29 | INFO | Train Epoch: [7/30] [24/240], current batch Loss: 0.992784 lr: 0.001
+2021-05-28 11:03:29 | INFO | Train Epoch: [7/30] [48/240], current batch Loss: 1.014902 lr: 0.001
+2021-05-28 11:03:30 | INFO | Train Epoch: [7/30] [72/240], current batch Loss: 0.997201 lr: 0.001
+2021-05-28 11:03:30 | INFO | Train Epoch: [7/30] [96/240], current batch Loss: 1.000988 lr: 0.001
+2021-05-28 11:03:31 | INFO | Train Epoch: [7/30] [120/240], current batch Loss: 0.994116 lr: 0.001
+2021-05-28 11:03:31 | INFO | Train Epoch: [7/30] [144/240], current batch Loss: 1.005123 lr: 0.001
+2021-05-28 11:03:32 | INFO | Train Epoch: [7/30] [168/240], current batch Loss: 1.000205 lr: 0.001
+2021-05-28 11:03:32 | INFO | Train Epoch: [7/30] [192/240], current batch Loss: 0.973160 lr: 0.001
+2021-05-28 11:03:32 | INFO | Train Epoch: [7/30] [216/240], current batch Loss: 1.007963 lr: 0.001
+2021-05-28 11:03:33 | INFO | Train Epoch: [7/30] [240/240], current batch Loss: 0.983253 lr: 0.001
+2021-05-28 11:03:33 | INFO | val loss:0.950224506855011, acc: 71.66666564941406
+2021-05-28 11:03:34 | INFO | Train Epoch: [8/30] [24/240], current batch Loss: 0.995972 lr: 0.001
+2021-05-28 11:03:34 | INFO | Train Epoch: [8/30] [48/240], current batch Loss: 0.963298 lr: 0.001
+2021-05-28 11:03:35 | INFO | Train Epoch: [8/30] [72/240], current batch Loss: 1.023392 lr: 0.001
+2021-05-28 11:03:35 | INFO | Train Epoch: [8/30] [96/240], current batch Loss: 0.959105 lr: 0.001
+2021-05-28 11:03:35 | INFO | Train Epoch: [8/30] [120/240], current batch Loss: 0.934361 lr: 0.001
+2021-05-28 11:03:36 | INFO | Train Epoch: [8/30] [144/240], current batch Loss: 0.985999 lr: 0.001
+2021-05-28 11:03:36 | INFO | Train Epoch: [8/30] [168/240], current batch Loss: 1.041525 lr: 0.001
+2021-05-28 11:03:37 | INFO | Train Epoch: [8/30] [192/240], current batch Loss: 1.060197 lr: 0.001
+2021-05-28 11:03:37 | INFO | Train Epoch: [8/30] [216/240], current batch Loss: 0.931012 lr: 0.001
+2021-05-28 11:03:37 | INFO | Train Epoch: [8/30] [240/240], current batch Loss: 0.994910 lr: 0.001
+2021-05-28 11:03:38 | INFO | val loss:0.9351874709129333, acc: 73.33333129882813
+2021-05-28 11:03:38 | INFO | Train Epoch: [9/30] [24/240], current batch Loss: 0.969210 lr: 0.001
+2021-05-28 11:03:39 | INFO | Train Epoch: [9/30] [48/240], current batch Loss: 0.926705 lr: 0.001
+2021-05-28 11:03:39 | INFO | Train Epoch: [9/30] [72/240], current batch Loss: 0.992046 lr: 0.001
+2021-05-28 11:03:40 | INFO | Train Epoch: [9/30] [96/240], current batch Loss: 0.955589 lr: 0.001
+2021-05-28 11:03:40 | INFO | Train Epoch: [9/30] [120/240], current batch Loss: 0.990319 lr: 0.001
+2021-05-28 11:03:40 | INFO | Train Epoch: [9/30] [144/240], current batch Loss: 0.981404 lr: 0.001
+2021-05-28 11:03:41 | INFO | Train Epoch: [9/30] [168/240], current batch Loss: 0.984333 lr: 0.001
+2021-05-28 11:03:41 | INFO | Train Epoch: [9/30] [192/240], current batch Loss: 0.935255 lr: 0.001
+2021-05-28 11:03:42 | INFO | Train Epoch: [9/30] [216/240], current batch Loss: 0.992141 lr: 0.001
+2021-05-28 11:03:42 | INFO | Train Epoch: [9/30] [240/240], current batch Loss: 0.955218 lr: 0.001
+2021-05-28 11:03:43 | INFO | val loss:0.9213762760162354, acc: 75.0
+2021-05-28 11:03:43 | INFO | Train Epoch: [10/30] [24/240], current batch Loss: 0.928186 lr: 0.001
+2021-05-28 11:03:44 | INFO | Train Epoch: [10/30] [48/240], current batch Loss: 0.931543 lr: 0.001
+2021-05-28 11:03:44 | INFO | Train Epoch: [10/30] [72/240], current batch Loss: 0.907476 lr: 0.001
+2021-05-28 11:03:44 | INFO | Train Epoch: [10/30] [96/240], current batch Loss: 0.910893 lr: 0.001
+2021-05-28 11:03:45 | INFO | Train Epoch: [10/30] [120/240], current batch Loss: 0.899347 lr: 0.001
+2021-05-28 11:03:45 | INFO | Train Epoch: [10/30] [144/240], current batch Loss: 0.973494 lr: 0.001
+2021-05-28 11:03:46 | INFO | Train Epoch: [10/30] [168/240], current batch Loss: 0.951889 lr: 0.001
+2021-05-28 11:03:46 | INFO | Train Epoch: [10/30] [192/240], current batch Loss: 0.935493 lr: 0.001
+2021-05-28 11:03:46 | INFO | Train Epoch: [10/30] [216/240], current batch Loss: 0.950246 lr: 0.001
+2021-05-28 11:03:47 | INFO | Train Epoch: [10/30] [240/240], current batch Loss: 0.935818 lr: 0.001
+2021-05-28 11:03:47 | INFO | val loss:0.9077962040901184, acc: 76.66666564941406
+2021-05-28 11:03:48 | INFO | Train Epoch: [11/30] [24/240], current batch Loss: 0.945270 lr: 0.001
+2021-05-28 11:03:48 | INFO | Train Epoch: [11/30] [48/240], current batch Loss: 0.953263 lr: 0.001
+2021-05-28 11:03:49 | INFO | Train Epoch: [11/30] [72/240], current batch Loss: 0.946452 lr: 0.001
+2021-05-28 11:03:49 | INFO | Train Epoch: [11/30] [96/240], current batch Loss: 0.975227 lr: 0.001
+2021-05-28 11:03:50 | INFO | Train Epoch: [11/30] [120/240], current batch Loss: 0.923245 lr: 0.001
+2021-05-28 11:03:50 | INFO | Train Epoch: [11/30] [144/240], current batch Loss: 0.902115 lr: 0.001
+2021-05-28 11:03:50 | INFO | Train Epoch: [11/30] [168/240], current batch Loss: 0.923504 lr: 0.001
+2021-05-28 11:03:51 | INFO | Train Epoch: [11/30] [192/240], current batch Loss: 0.951056 lr: 0.001
+2021-05-28 11:03:51 | INFO | Train Epoch: [11/30] [216/240], current batch Loss: 0.948137 lr: 0.001
+2021-05-28 11:03:52 | INFO | Train Epoch: [11/30] [240/240], current batch Loss: 0.924086 lr: 0.001
+2021-05-28 11:03:52 | INFO | val loss:0.895119559764862, acc: 78.33333129882813
+2021-05-28 11:03:53 | INFO | Train Epoch: [12/30] [24/240], current batch Loss: 0.926347 lr: 0.001
+2021-05-28 11:03:53 | INFO | Train Epoch: [12/30] [48/240], current batch Loss: 0.954013 lr: 0.001
+2021-05-28 11:03:54 | INFO | Train Epoch: [12/30] [72/240], current batch Loss: 0.899024 lr: 0.001
+2021-05-28 11:03:54 | INFO | Train Epoch: [12/30] [96/240], current batch Loss: 0.863030 lr: 0.001
+2021-05-28 11:03:54 | INFO | Train Epoch: [12/30] [120/240], current batch Loss: 0.940221 lr: 0.001
+2021-05-28 11:03:55 | INFO | Train Epoch: [12/30] [144/240], current batch Loss: 0.945609 lr: 0.001
+2021-05-28 11:03:55 | INFO | Train Epoch: [12/30] [168/240], current batch Loss: 0.920521 lr: 0.001
+2021-05-28 11:03:56 | INFO | Train Epoch: [12/30] [192/240], current batch Loss: 0.925093 lr: 0.001
+2021-05-28 11:03:56 | INFO | Train Epoch: [12/30] [216/240], current batch Loss: 0.961782 lr: 0.001
+2021-05-28 11:03:56 | INFO | Train Epoch: [12/30] [240/240], current batch Loss: 0.919203 lr: 0.001
+2021-05-28 11:03:57 | INFO | val loss:0.8824767827987671, acc: 83.33332824707031
+2021-05-28 11:03:57 | INFO | Train Epoch: [13/30] [24/240], current batch Loss: 0.894094 lr: 0.001
+2021-05-28 11:03:58 | INFO | Train Epoch: [13/30] [48/240], current batch Loss: 0.893336 lr: 0.001
+2021-05-28 11:03:58 | INFO | Train Epoch: [13/30] [72/240], current batch Loss: 0.894392 lr: 0.001
+2021-05-28 11:03:59 | INFO | Train Epoch: [13/30] [96/240], current batch Loss: 0.950761 lr: 0.001
+2021-05-28 11:03:59 | INFO | Train Epoch: [13/30] [120/240], current batch Loss: 0.972558 lr: 0.001
+2021-05-28 11:03:59 | INFO | Train Epoch: [13/30] [144/240], current batch Loss: 0.922565 lr: 0.001
+2021-05-28 11:04:00 | INFO | Train Epoch: [13/30] [168/240], current batch Loss: 0.987233 lr: 0.001
+2021-05-28 11:04:00 | INFO | Train Epoch: [13/30] [192/240], current batch Loss: 0.900125 lr: 0.001
+2021-05-28 11:04:01 | INFO | Train Epoch: [13/30] [216/240], current batch Loss: 0.931759 lr: 0.001
+2021-05-28 11:04:01 | INFO | Train Epoch: [13/30] [240/240], current batch Loss: 0.948714 lr: 0.001
+2021-05-28 11:04:02 | INFO | val loss:0.8704276204109191, acc: 83.33332824707031
+2021-05-28 11:04:02 | INFO | Train Epoch: [14/30] [24/240], current batch Loss: 0.909656 lr: 0.001
+2021-05-28 11:04:03 | INFO | Train Epoch: [14/30] [48/240], current batch Loss: 0.971049 lr: 0.001
+2021-05-28 11:04:03 | INFO | Train Epoch: [14/30] [72/240], current batch Loss: 0.892972 lr: 0.001
+2021-05-28 11:04:03 | INFO | Train Epoch: [14/30] [96/240], current batch Loss: 0.889622 lr: 0.001
+2021-05-28 11:04:04 | INFO | Train Epoch: [14/30] [120/240], current batch Loss: 0.877580 lr: 0.001
+2021-05-28 11:04:04 | INFO | Train Epoch: [14/30] [144/240], current batch Loss: 0.914364 lr: 0.001
+2021-05-28 11:04:04 | INFO | Train Epoch: [14/30] [168/240], current batch Loss: 0.858234 lr: 0.001
+2021-05-28 11:04:05 | INFO | Train Epoch: [14/30] [192/240], current batch Loss: 0.921077 lr: 0.001
+2021-05-28 11:04:05 | INFO | Train Epoch: [14/30] [216/240], current batch Loss: 0.871280 lr: 0.001
+2021-05-28 11:04:06 | INFO | Train Epoch: [14/30] [240/240], current batch Loss: 0.967448 lr: 0.001
+2021-05-28 11:04:06 | INFO | val loss:0.8603203535079956, acc: 83.33332824707031
+2021-05-28 11:04:07 | INFO | Train Epoch: [15/30] [24/240], current batch Loss: 0.917320 lr: 0.001
+2021-05-28 11:04:07 | INFO | Train Epoch: [15/30] [48/240], current batch Loss: 0.944539 lr: 0.001
+2021-05-28 11:04:07 | INFO | Train Epoch: [15/30] [72/240], current batch Loss: 0.888932 lr: 0.001
+2021-05-28 11:04:08 | INFO | Train Epoch: [15/30] [96/240], current batch Loss: 0.830099 lr: 0.001
+2021-05-28 11:04:08 | INFO | Train Epoch: [15/30] [120/240], current batch Loss: 0.899761 lr: 0.001
+2021-05-28 11:04:09 | INFO | Train Epoch: [15/30] [144/240], current batch Loss: 0.848136 lr: 0.001
+2021-05-28 11:04:09 | INFO | Train Epoch: [15/30] [168/240], current batch Loss: 0.882806 lr: 0.001
+2021-05-28 11:04:10 | INFO | Train Epoch: [15/30] [192/240], current batch Loss: 0.887687 lr: 0.001
+2021-05-28 11:04:10 | INFO | Train Epoch: [15/30] [216/240], current batch Loss: 0.851456 lr: 0.001
+2021-05-28 11:04:10 | INFO | Train Epoch: [15/30] [240/240], current batch Loss: 0.919095 lr: 0.001
+2021-05-28 11:04:11 | INFO | val loss:0.8491803050041199, acc: 84.99999694824218
+2021-05-28 11:04:11 | INFO | Train Epoch: [16/30] [24/240], current batch Loss: 0.873158 lr: 0.001
+2021-05-28 11:04:12 | INFO | Train Epoch: [16/30] [48/240], current batch Loss: 0.881233 lr: 0.001
+2021-05-28 11:04:12 | INFO | Train Epoch: [16/30] [72/240], current batch Loss: 0.886906 lr: 0.001
+2021-05-28 11:04:13 | INFO | Train Epoch: [16/30] [96/240], current batch Loss: 0.857541 lr: 0.001
+2021-05-28 11:04:13 | INFO | Train Epoch: [16/30] [120/240], current batch Loss: 0.878916 lr: 0.001
+2021-05-28 11:04:13 | INFO | Train Epoch: [16/30] [144/240], current batch Loss: 0.817836 lr: 0.001
+2021-05-28 11:04:14 | INFO | Train Epoch: [16/30] [168/240], current batch Loss: 0.917116 lr: 0.001
+2021-05-28 11:04:14 | INFO | Train Epoch: [16/30] [192/240], current batch Loss: 0.901516 lr: 0.001
+2021-05-28 11:04:15 | INFO | Train Epoch: [16/30] [216/240], current batch Loss: 0.834483 lr: 0.001
+2021-05-28 11:04:15 | INFO | Train Epoch: [16/30] [240/240], current batch Loss: 0.906914 lr: 0.001
+2021-05-28 11:04:16 | INFO | val loss:0.8388201713562011, acc: 84.99999694824218
+2021-05-28 11:04:16 | INFO | Train Epoch: [17/30] [24/240], current batch Loss: 0.869373 lr: 0.001
+2021-05-28 11:04:17 | INFO | Train Epoch: [17/30] [48/240], current batch Loss: 0.886327 lr: 0.001
+2021-05-28 11:04:17 | INFO | Train Epoch: [17/30] [72/240], current batch Loss: 0.843622 lr: 0.001
+2021-05-28 11:04:17 | INFO | Train Epoch: [17/30] [96/240], current batch Loss: 0.896981 lr: 0.001
+2021-05-28 11:04:18 | INFO | Train Epoch: [17/30] [120/240], current batch Loss: 0.881356 lr: 0.001
+2021-05-28 11:04:18 | INFO | Train Epoch: [17/30] [144/240], current batch Loss: 0.862350 lr: 0.001
+2021-05-28 11:04:19 | INFO | Train Epoch: [17/30] [168/240], current batch Loss: 0.914290 lr: 0.001
+2021-05-28 11:04:19 | INFO | Train Epoch: [17/30] [192/240], current batch Loss: 0.895805 lr: 0.001
+2021-05-28 11:04:20 | INFO | Train Epoch: [17/30] [216/240], current batch Loss: 0.773905 lr: 0.001
+2021-05-28 11:04:20 | INFO | Train Epoch: [17/30] [240/240], current batch Loss: 0.832494 lr: 0.001
+2021-05-28 11:04:20 | INFO | val loss:0.8284347176551818, acc: 86.66666412353516
+2021-05-28 11:04:21 | INFO | Train Epoch: [18/30] [24/240], current batch Loss: 0.870751 lr: 0.001
+2021-05-28 11:04:21 | INFO | Train Epoch: [18/30] [48/240], current batch Loss: 0.894906 lr: 0.001
+2021-05-28 11:04:22 | INFO | Train Epoch: [18/30] [72/240], current batch Loss: 0.883050 lr: 0.001
+2021-05-28 11:04:22 | INFO | Train Epoch: [18/30] [96/240], current batch Loss: 0.875403 lr: 0.001
+2021-05-28 11:04:23 | INFO | Train Epoch: [18/30] [120/240], current batch Loss: 0.832399 lr: 0.001
+2021-05-28 11:04:23 | INFO | Train Epoch: [18/30] [144/240], current batch Loss: 0.884432 lr: 0.001
+2021-05-28 11:04:23 | INFO | Train Epoch: [18/30] [168/240], current batch Loss: 0.847956 lr: 0.001
+2021-05-28 11:04:24 | INFO | Train Epoch: [18/30] [192/240], current batch Loss: 0.869281 lr: 0.001
+2021-05-28 11:04:24 | INFO | Train Epoch: [18/30] [216/240], current batch Loss: 0.841199 lr: 0.001
+2021-05-28 11:04:25 | INFO | Train Epoch: [18/30] [240/240], current batch Loss: 0.867525 lr: 0.001
+2021-05-28 11:04:25 | INFO | val loss:0.8186778903007508, acc: 86.66666412353516
+2021-05-28 11:04:26 | INFO | Train Epoch: [19/30] [24/240], current batch Loss: 0.832268 lr: 0.001
+2021-05-28 11:04:26 | INFO | Train Epoch: [19/30] [48/240], current batch Loss: 0.812115 lr: 0.001
+2021-05-28 11:04:26 | INFO | Train Epoch: [19/30] [72/240], current batch Loss: 0.835029 lr: 0.001
+2021-05-28 11:04:27 | INFO | Train Epoch: [19/30] [96/240], current batch Loss: 0.850121 lr: 0.001
+2021-05-28 11:04:27 | INFO | Train Epoch: [19/30] [120/240], current batch Loss: 0.859672 lr: 0.001
+2021-05-28 11:04:28 | INFO | Train Epoch: [19/30] [144/240], current batch Loss: 0.878708 lr: 0.001
+2021-05-28 11:04:28 | INFO | Train Epoch: [19/30] [168/240], current batch Loss: 0.880046 lr: 0.001
+2021-05-28 11:04:29 | INFO | Train Epoch: [19/30] [192/240], current batch Loss: 0.827822 lr: 0.001
+2021-05-28 11:04:29 | INFO | Train Epoch: [19/30] [216/240], current batch Loss: 0.857741 lr: 0.001
+2021-05-28 11:04:29 | INFO | Train Epoch: [19/30] [240/240], current batch Loss: 0.847831 lr: 0.001
+2021-05-28 11:04:30 | INFO | val loss:0.80869220495224, acc: 88.33333282470703
+2021-05-28 11:04:30 | INFO | Train Epoch: [20/30] [24/240], current batch Loss: 0.836981 lr: 0.001
+2021-05-28 11:04:31 | INFO | Train Epoch: [20/30] [48/240], current batch Loss: 0.856335 lr: 0.001
+2021-05-28 11:04:31 | INFO | Train Epoch: [20/30] [72/240], current batch Loss: 0.797818 lr: 0.001
+2021-05-28 11:04:32 | INFO | Train Epoch: [20/30] [96/240], current batch Loss: 0.886200 lr: 0.001
+2021-05-28 11:04:32 | INFO | Train Epoch: [20/30] [120/240], current batch Loss: 0.931998 lr: 0.001
+2021-05-28 11:04:33 | INFO | Train Epoch: [20/30] [144/240], current batch Loss: 0.812914 lr: 0.001
+2021-05-28 11:04:33 | INFO | Train Epoch: [20/30] [168/240], current batch Loss: 0.904544 lr: 0.001
+2021-05-28 11:04:33 | INFO | Train Epoch: [20/30] [192/240], current batch Loss: 0.843016 lr: 0.001
+2021-05-28 11:04:34 | INFO | Train Epoch: [20/30] [216/240], current batch Loss: 0.854542 lr: 0.001
+2021-05-28 11:04:34 | INFO | Train Epoch: [20/30] [240/240], current batch Loss: 0.837121 lr: 0.001
+2021-05-28 11:04:35 | INFO | val loss:0.7991039395332337, acc: 88.33333282470703
+2021-05-28 11:04:35 | INFO | Train Epoch: [21/30] [24/240], current batch Loss: 0.815755 lr: 0.001
+2021-05-28 11:04:36 | INFO | Train Epoch: [21/30] [48/240], current batch Loss: 0.842888 lr: 0.001
+2021-05-28 11:04:36 | INFO | Train Epoch: [21/30] [72/240], current batch Loss: 0.864356 lr: 0.001
+2021-05-28 11:04:37 | INFO | Train Epoch: [21/30] [96/240], current batch Loss: 0.772065 lr: 0.001
+2021-05-28 11:04:37 | INFO | Train Epoch: [21/30] [120/240], current batch Loss: 0.835416 lr: 0.001
+2021-05-28 11:04:37 | INFO | Train Epoch: [21/30] [144/240], current batch Loss: 0.821957 lr: 0.001
+2021-05-28 11:04:38 | INFO | Train Epoch: [21/30] [168/240], current batch Loss: 0.815636 lr: 0.001
+2021-05-28 11:04:38 | INFO | Train Epoch: [21/30] [192/240], current batch Loss: 0.774844 lr: 0.001
+2021-05-28 11:04:39 | INFO | Train Epoch: [21/30] [216/240], current batch Loss: 0.810687 lr: 0.001
+2021-05-28 11:04:39 | INFO | Train Epoch: [21/30] [240/240], current batch Loss: 0.890694 lr: 0.001
+2021-05-28 11:04:39 | INFO | val loss:0.7898881793022156, acc: 88.33333282470703
+2021-05-28 11:04:40 | INFO | Train Epoch: [22/30] [24/240], current batch Loss: 0.807049 lr: 0.001
+2021-05-28 11:04:40 | INFO | Train Epoch: [22/30] [48/240], current batch Loss: 0.820087 lr: 0.001
+2021-05-28 11:04:41 | INFO | Train Epoch: [22/30] [72/240], current batch Loss: 0.848670 lr: 0.001
+2021-05-28 11:04:41 | INFO | Train Epoch: [22/30] [96/240], current batch Loss: 0.797638 lr: 0.001
+2021-05-28 11:04:42 | INFO | Train Epoch: [22/30] [120/240], current batch Loss: 0.842638 lr: 0.001
+2021-05-28 11:04:42 | INFO | Train Epoch: [22/30] [144/240], current batch Loss: 0.855081 lr: 0.001
+2021-05-28 11:04:42 | INFO | Train Epoch: [22/30] [168/240], current batch Loss: 0.813666 lr: 0.001
+2021-05-28 11:04:43 | INFO | Train Epoch: [22/30] [192/240], current batch Loss: 0.783213 lr: 0.001
+2021-05-28 11:04:43 | INFO | Train Epoch: [22/30] [216/240], current batch Loss: 0.824089 lr: 0.001
+2021-05-28 11:04:44 | INFO | Train Epoch: [22/30] [240/240], current batch Loss: 0.809292 lr: 0.001
+2021-05-28 11:04:44 | INFO | val loss:0.7801872611045837, acc: 88.33333282470703
+2021-05-28 11:04:45 | INFO | Train Epoch: [23/30] [24/240], current batch Loss: 0.817785 lr: 0.001
+2021-05-28 11:04:45 | INFO | Train Epoch: [23/30] [48/240], current batch Loss: 0.826375 lr: 0.001
+2021-05-28 11:04:45 | INFO | Train Epoch: [23/30] [72/240], current batch Loss: 0.810518 lr: 0.001
+2021-05-28 11:04:46 | INFO | Train Epoch: [23/30] [96/240], current batch Loss: 0.791715 lr: 0.001
+2021-05-28 11:04:46 | INFO | Train Epoch: [23/30] [120/240], current batch Loss: 0.862190 lr: 0.001
+2021-05-28 11:04:47 | INFO | Train Epoch: [23/30] [144/240], current batch Loss: 0.814008 lr: 0.001
+2021-05-28 11:04:47 | INFO | Train Epoch: [23/30] [168/240], current batch Loss: 0.775823 lr: 0.001
+2021-05-28 11:04:48 | INFO | Train Epoch: [23/30] [192/240], current batch Loss: 0.739468 lr: 0.001
+2021-05-28 11:04:48 | INFO | Train Epoch: [23/30] [216/240], current batch Loss: 0.778883 lr: 0.001
+2021-05-28 11:04:48 | INFO | Train Epoch: [23/30] [240/240], current batch Loss: 0.809899 lr: 0.001
+2021-05-28 11:04:49 | INFO | val loss:0.771722936630249, acc: 89.9999984741211
+2021-05-28 11:04:50 | INFO | Train Epoch: [24/30] [24/240], current batch Loss: 0.851694 lr: 0.001
+2021-05-28 11:04:50 | INFO | Train Epoch: [24/30] [48/240], current batch Loss: 0.799862 lr: 0.001
+2021-05-28 11:04:51 | INFO | Train Epoch: [24/30] [72/240], current batch Loss: 0.764079 lr: 0.001
+2021-05-28 11:04:51 | INFO | Train Epoch: [24/30] [96/240], current batch Loss: 0.830240 lr: 0.001
+2021-05-28 11:04:51 | INFO | Train Epoch: [24/30] [120/240], current batch Loss: 0.793697 lr: 0.001
+2021-05-28 11:04:52 | INFO | Train Epoch: [24/30] [144/240], current batch Loss: 0.706601 lr: 0.001
+2021-05-28 11:04:52 | INFO | Train Epoch: [24/30] [168/240], current batch Loss: 0.778857 lr: 0.001
+2021-05-28 11:04:53 | INFO | Train Epoch: [24/30] [192/240], current batch Loss: 0.803211 lr: 0.001
+2021-05-28 11:04:53 | INFO | Train Epoch: [24/30] [216/240], current batch Loss: 0.813771 lr: 0.001
+2021-05-28 11:04:53 | INFO | Train Epoch: [24/30] [240/240], current batch Loss: 0.743253 lr: 0.001
+2021-05-28 11:04:54 | INFO | val loss:0.7621561884880066, acc: 89.9999984741211
+2021-05-28 11:04:54 | INFO | Train Epoch: [25/30] [24/240], current batch Loss: 0.816906 lr: 0.001
+2021-05-28 11:04:55 | INFO | Train Epoch: [25/30] [48/240], current batch Loss: 0.827804 lr: 0.001
+2021-05-28 11:04:55 | INFO | Train Epoch: [25/30] [72/240], current batch Loss: 0.815247 lr: 0.001
+2021-05-28 11:04:56 | INFO | Train Epoch: [25/30] [96/240], current batch Loss: 0.819273 lr: 0.001
+2021-05-28 11:04:56 | INFO | Train Epoch: [25/30] [120/240], current batch Loss: 0.780935 lr: 0.001
+2021-05-28 11:04:57 | INFO | Train Epoch: [25/30] [144/240], current batch Loss: 0.775496 lr: 0.001
+2021-05-28 11:04:57 | INFO | Train Epoch: [25/30] [168/240], current batch Loss: 0.880751 lr: 0.001
+2021-05-28 11:04:57 | INFO | Train Epoch: [25/30] [192/240], current batch Loss: 0.763768 lr: 0.001
+2021-05-28 11:04:58 | INFO | Train Epoch: [25/30] [216/240], current batch Loss: 0.793420 lr: 0.001
+2021-05-28 11:04:58 | INFO | Train Epoch: [25/30] [240/240], current batch Loss: 0.763703 lr: 0.001
+2021-05-28 11:04:59 | INFO | val loss:0.7528907656669617, acc: 89.9999984741211
+2021-05-28 11:05:00 | INFO | Train Epoch: [26/30] [24/240], current batch Loss: 0.841352 lr: 0.001
+2021-05-28 11:05:00 | INFO | Train Epoch: [26/30] [48/240], current batch Loss: 0.786782 lr: 0.001
+2021-05-28 11:05:00 | INFO | Train Epoch: [26/30] [72/240], current batch Loss: 0.768420 lr: 0.001
+2021-05-28 11:05:01 | INFO | Train Epoch: [26/30] [96/240], current batch Loss: 0.775006 lr: 0.001
+2021-05-28 11:05:01 | INFO | Train Epoch: [26/30] [120/240], current batch Loss: 0.813019 lr: 0.001
+2021-05-28 11:05:02 | INFO | Train Epoch: [26/30] [144/240], current batch Loss: 0.741101 lr: 0.001
+2021-05-28 11:05:02 | INFO | Train Epoch: [26/30] [168/240], current batch Loss: 0.750003 lr: 0.001
+2021-05-28 11:05:03 | INFO | Train Epoch: [26/30] [192/240], current batch Loss: 0.869435 lr: 0.001
+2021-05-28 11:05:03 | INFO | Train Epoch: [26/30] [216/240], current batch Loss: 0.744017 lr: 0.001
+2021-05-28 11:05:03 | INFO | Train Epoch: [26/30] [240/240], current batch Loss: 0.833990 lr: 0.001
+2021-05-28 11:05:04 | INFO | val loss:0.7439500570297242, acc: 89.9999984741211
+2021-05-28 11:05:04 | INFO | Train Epoch: [27/30] [24/240], current batch Loss: 0.748766 lr: 0.001
+2021-05-28 11:05:05 | INFO | Train Epoch: [27/30] [48/240], current batch Loss: 0.733763 lr: 0.001
+2021-05-28 11:05:05 | INFO | Train Epoch: [27/30] [72/240], current batch Loss: 0.761866 lr: 0.001
+2021-05-28 11:05:06 | INFO | Train Epoch: [27/30] [96/240], current batch Loss: 0.754270 lr: 0.001
+2021-05-28 11:05:06 | INFO | Train Epoch: [27/30] [120/240], current batch Loss: 0.739508 lr: 0.001
+2021-05-28 11:05:07 | INFO | Train Epoch: [27/30] [144/240], current batch Loss: 0.803525 lr: 0.001
+2021-05-28 11:05:07 | INFO | Train Epoch: [27/30] [168/240], current batch Loss: 0.758356 lr: 0.001
+2021-05-28 11:05:08 | INFO | Train Epoch: [27/30] [192/240], current batch Loss: 0.772940 lr: 0.001
+2021-05-28 11:05:08 | INFO | Train Epoch: [27/30] [216/240], current batch Loss: 0.758048 lr: 0.001
+2021-05-28 11:05:09 | INFO | Train Epoch: [27/30] [240/240], current batch Loss: 0.795336 lr: 0.001
+2021-05-28 11:05:09 | INFO | val loss:0.735582149028778, acc: 89.9999984741211
+2021-05-28 11:05:10 | INFO | Train Epoch: [28/30] [24/240], current batch Loss: 0.802430 lr: 0.001
+2021-05-28 11:05:10 | INFO | Train Epoch: [28/30] [48/240], current batch Loss: 0.837171 lr: 0.001
+2021-05-28 11:05:10 | INFO | Train Epoch: [28/30] [72/240], current batch Loss: 0.777064 lr: 0.001
+2021-05-28 11:05:11 | INFO | Train Epoch: [28/30] [96/240], current batch Loss: 0.839480 lr: 0.001
+2021-05-28 11:05:11 | INFO | Train Epoch: [28/30] [120/240], current batch Loss: 0.694947 lr: 0.001
+2021-05-28 11:05:12 | INFO | Train Epoch: [28/30] [144/240], current batch Loss: 0.778749 lr: 0.001
+2021-05-28 11:05:12 | INFO | Train Epoch: [28/30] [168/240], current batch Loss: 0.812344 lr: 0.001
+2021-05-28 11:05:13 | INFO | Train Epoch: [28/30] [192/240], current batch Loss: 0.743982 lr: 0.001
+2021-05-28 11:05:13 | INFO | Train Epoch: [28/30] [216/240], current batch Loss: 0.770216 lr: 0.001
+2021-05-28 11:05:14 | INFO | Train Epoch: [28/30] [240/240], current batch Loss: 0.713946 lr: 0.001
+2021-05-28 11:05:14 | INFO | val loss:0.7274569034576416, acc: 89.9999984741211
+2021-05-28 11:05:15 | INFO | Train Epoch: [29/30] [24/240], current batch Loss: 0.769465 lr: 0.001
+2021-05-28 11:05:15 | INFO | Train Epoch: [29/30] [48/240], current batch Loss: 0.766978 lr: 0.001
+2021-05-28 11:05:16 | INFO | Train Epoch: [29/30] [72/240], current batch Loss: 0.672289 lr: 0.001
+2021-05-28 11:05:16 | INFO | Train Epoch: [29/30] [96/240], current batch Loss: 0.776912 lr: 0.001
+2021-05-28 11:05:16 | INFO | Train Epoch: [29/30] [120/240], current batch Loss: 0.702203 lr: 0.001
+2021-05-28 11:05:17 | INFO | Train Epoch: [29/30] [144/240], current batch Loss: 0.720197 lr: 0.001
+2021-05-28 11:05:17 | INFO | Train Epoch: [29/30] [168/240], current batch Loss: 0.812069 lr: 0.001
+2021-05-28 11:05:18 | INFO | Train Epoch: [29/30] [192/240], current batch Loss: 0.719233 lr: 0.001
+2021-05-28 11:05:18 | INFO | Train Epoch: [29/30] [216/240], current batch Loss: 0.806277 lr: 0.001
+2021-05-28 11:05:19 | INFO | Train Epoch: [29/30] [240/240], current batch Loss: 0.746662 lr: 0.001
+2021-05-28 11:05:19 | INFO | val loss:0.7187430739402771, acc: 89.9999984741211
