@@ -2,7 +2,7 @@ _name_: "efficientnet.yaml"
 model:
   in_channel: 3
   num_classes: 3
-  model_name: "efficientnet-b1"
+  model_name: "efficientnet-b0"
   resume: False
   weights: "assets/weights/.pt"
 #  height: 240
@@ -21,7 +21,7 @@ solver:
   lr: 0.001
 
 datasets:
-  name: "crack"
+#  name: "***"
   images_dir: "data/images"
   train_file: "data/train.txt"
   val_file: "data/val.txt"
