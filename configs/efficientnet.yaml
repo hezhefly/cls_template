@@ -4,20 +4,20 @@ model:
   num_classes: 3
   model_name: "efficientnet-b1"
   resume: False
-  weights: "assets/weights/x.pt"
-  height: 240
-  width: 240
+  weights: "assets/weights/.pt"
+#  height: 240
+#  width: 240
 
 train:
-  batch_size: 32
+  batch_size: 24
   max_epoch: 30
 
 test:
-  batch_size: 32
+  batch_size: 24
 
 solver:
   seed: 42
-  device: "cpu"
+  device: "cuda:0"
   lr: 0.001
 
 datasets:

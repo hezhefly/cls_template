@@ -19,17 +19,18 @@ class ClsAgent(BaseAgent):
         super().__init__(cfg)
         self.cfg = cfg
         self.device = torch.device(self.cfg.solver.device)  # define device
-        self.model = EfficientNet.from_name(self.cfg.model.model_name,
-                                            in_channels=self.cfg.model.in_channel,
-                                            num_classes=self.cfg.model.num_classes).to(self.device)  # models
+        self.model = EfficientNet.from_pretrained(self.cfg.model.model_name,
+                                                  in_channels=self.cfg.model.in_channel,
+                                                  num_classes=self.cfg.model.num_classes).to(self.device)  # models
+        self.image_size = EfficientNet.get_image_size(self.cfg.model.model_name)
         self.loss = nn.CrossEntropyLoss()
-        self.optimizer = torch.optim.Adam(self.model.parameters(), lr=self.cfg.solver.lr)
+        self.optimizer = torch.optim.SGD(self.model.parameters(), self.cfg.solver.lr)
 
         self.current_epoch = 0
-        self.best_acc = 0.4
+        self.best_acc = 0
 
-        self.train_trans = CustomAug(height=self.cfg.model.height, width=self.cfg.model.width)('train')
-        self.val_trans = CustomAug(height=self.cfg.model.height, width=self.cfg.model.width)('val')
+        self.train_trans = CustomAug(height=self.image_size, width=self.image_size)('train')
+        self.val_trans = CustomAug(height=self.image_size, width=self.image_size)('val')
         self.train_data_loader = self.load_dataset('train')
         self.val_data_loader = self.load_dataset('val')
 
@@ -41,7 +42,7 @@ class ClsAgent(BaseAgent):
             # 加载预训练模型的参数和model中不冲突的部分
             state_dict_new = {k: v for k, v in weight_state_dict.items() if k in model_state_dict.keys() and
                               self.model.state_dict()[k].shape == v.shape}
-            # logger.info("load layers: {}".format(state_dict_new.keys()))
+            logger.info("load layers: {}".format(state_dict_new.keys()))
             model_state_dict.update(state_dict_new)
             # 更新模型参数
             self.model.load_state_dict(model_state_dict)
@@ -52,16 +53,15 @@ class ClsAgent(BaseAgent):
                                        file=self.cfg.datasets.train_file,
                                        transform=self.train_trans)
             train_data_loader = DataLoader(train_dataset, batch_size=self.cfg.train.batch_size, shuffle=True)
-            logger.info("%d train data loaded,batch size: %d" % (len(train_data_loader.dataset),
-                                                                 self.cfg.train.batch_size))
+            logger.info(f"{len(train_data_loader.dataset)} train data loaded,batch size: "
+                        f"{self.cfg.train.batch_size}, image size:{self.image_size}")
             return train_data_loader
         elif mode == "val":
             val_dataset = ClsDataset(images_dir=self.cfg.datasets.images_dir,
                                      file=self.cfg.datasets.val_file,
                                      transform=self.val_trans)
             val_data_loader = DataLoader(val_dataset, batch_size=self.cfg.test.batch_size)
-            logger.info("%d val data loaded,batch size: %d" % (len(val_data_loader.dataset),
-                                                               self.cfg.test.batch_size))
+            logger.info(f"{len(val_data_loader.dataset)} val data loaded,batch size: {self.cfg.test.batch_size}")
             return val_data_loader
 
     @logger.catch
@@ -88,10 +88,10 @@ class ClsAgent(BaseAgent):
             if self.current_epoch % self.cfg.save.val_per_epoch == 0:
                 acc = self.validate()
                 acc_best = acc > self.best_acc
-                if acc_best:  # 平均iou变大
+                if acc_best:  #
                     self.best_acc = acc
                     save_path = os.path.join(self.cfg.save.weight_dir,
-                                             f"{self.cfg.model.name}_{self.current_epoch}_{round(acc, 3)}.pt")
+                                             f"{self.cfg.model.model_name}_{self.current_epoch}_{round(acc, 3)}.pt")
                     torch.save(self.model.state_dict(), save_path)
 
     def load_model(self, saved_model):
@@ -112,7 +112,7 @@ class ClsAgent(BaseAgent):
 
                 acc1 = accuracy(outputs, labels, topk=(1,))[0]
                 losses.update(loss.item(), images.size(0))
-                top1.update(acc1[0], images.size(0))
+                top1.update(acc1.item(), images.size(0))
 
             logger.info(f"val loss:{losses.avg}, acc: {top1.avg}")
-            return top1.avg
+        return top1.avg
